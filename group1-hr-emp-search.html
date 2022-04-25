@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<!--Name: Group1
-	Filename: smith-group1-form.html
+	Filename: group1-hr-emp-search.html
     Class Section: CTI.110.0005
-    Purpose: search the database for a job title and return average salary and a table matching criteria
+    Purpose: search the database for last name or ID number
 	-->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,19 @@
 </header>
 
 <main>
-	<form id="job-title" action="group1-hr-job-title.php" method="post">
+	<form id="name-id" action="group1-hr-emp-search.php" method="post">
 		<fieldset>
-		<legend>Search</legend>
-			<label for="title">What is the job title?</label>
-			<input type="text" id="title" name="title" required>
+		<legend>Last Name</legend>
+			<label for="lastName">What is the employee's last name?</label>
+			<input type="text" id="lastName" name="lastName">
 		</fieldset>
+		<br>
+		<fieldset>
+		<legend>ID number</legend>
+			<label for="idNum">What is the employees ID number?</label>
+			<input type="text" id="idNum" name="idNum">
+		</fieldset>
+		<br />
 		<button type="submit" id="submit">Search the database</button>
 	</form>
 </main>
