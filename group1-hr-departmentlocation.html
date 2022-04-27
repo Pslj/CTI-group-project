@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Name: Group1
+	Filename: group1-hr-emp-search.html
+    Class Section: CTI.110.0005
+    Purpose: search the database for last name or ID number
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Search</title>
+	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<header>
+	<h1>Employee Search</h1>
+</header>
+
+<main>
+	<form id="name-id" action="group1-hr-departmentlocation.php" method="post">
+		<fieldset>
+		<legend>Location</legend>
+			<label for="location">What is the location?</label>
+			<input type="text" id="location" name="location">
+		</fieldset>
+		<br>
+		<fieldset>
+		<legend>ID number</legend>
+			<label for="deptName">What is the department name?</label>
+			<input type="text" id="deptName" name="deptName">
+		</fieldset>
+		<br />
+		<button type="submit" id="submit">Search the database</button>
+	</form>
+</main>
+<br />
+<footer>
+	<p class="white">Thank you for using this program - Programmer is: Group1</p>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>
