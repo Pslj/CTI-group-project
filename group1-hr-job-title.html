@@ -2,28 +2,36 @@
 <html lang="en">
 <head>
 	<!--Name: Group1
-	Filename: smith-group1-form.html
+	Filename: group1-hr-job-title.html
     Class Section: CTI.110.0005
     Purpose: search the database for a job title and return average salary and a table matching criteria
 	-->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Event Form DD</title>
+	<title>Job Title Search</title>
 	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
 <header>
-	<h1>Employee Search</h1>
+	<h1>Job Title Search</h1>
 </header>
-
+<nav>
+	<h2>Navigation</h2>
+	<ul>
+		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
+		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
+		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+	</ul>  
+</nav>
 <main>
 	<form id="job-title" action="group1-hr-job-title.php" method="post">
 		<fieldset>
 		<legend>Search</legend>
 			<label for="title">What is the job title?</label>
-			<input type="text" id="title" name="title" required>
+			<input type="text" id="title" name="title" required pattern="[A-Za-z]{0,}">
 		</fieldset>
+		<br>
 		<button type="submit" id="submit">Search the database</button>
 	</form>
 </main>

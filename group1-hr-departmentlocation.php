@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <title>HR job title database search</title>
+  <title>HR department database search results</title>
   <link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
+<header>
+	<h1>List of departments</h1>
+</header>
+<nav>
+	<h2>Navigation</h2>
+	<ul>
+		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
+		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
+		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+	</ul>  
+</nav>
 <?php
-$server = "localhost";
-$user = "cti110";
-$pw = "wtcc";
-$db = "hr";
-  
+include ("inc-connect-mariadb.php"); 
+$connect=mysqli_connect($server, $user, $pw, $db);   
 $location = $_POST['location'];
-$connect = mysqli_connect ($server, $user, $pw, $db);
 if(!$connect) {
 	die("ERROR: Cannot connect to database $db on server $server using username $user (".mysqli_connect_errno().", ".mysqli_connect_error().")");
 }
-
 //t1 table, c1 column1, c2 column2, p1 search string
 function returnQuery($connect, $t1, $c1, $c2, $p1){
 	$Query = "SELECT $c1, $c2 FROM $t1";
@@ -82,14 +87,13 @@ function printQueryTest($connect, $t1, $c1, $c2, $p1, $p2, $r){
 }
 	
 function printTable(){
-	print("<table border = \"1\">");
 	print("<tr><th>ID</th><th>Name</th><th>Street address</th><th>City</th><th>State/Province</th><th>Postal code</th><th>Country</th></tr>");	
 }
-
-print("<h1>List of departments in \"$location\"");
+print("<table border = \"1\">");
+print("<caption>List of departments in \"$location\"");
 	
 if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
-	print(" by city</h1>");
+	print(" by city</caption>");
 	printTable();
 	$LocationResults = returnQuery($connect, 'locations', 'city', 'location_id', $location);
 	for ($k = 0; $k < sizeOf($LocationResults); $k++) {
@@ -97,7 +101,7 @@ if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
 		printQuery($connect, $DeptResults);
 	}
 } else if(returnQuery($connect, 'locations', 'state_province', 'location_id', $location)){
-	print(" by state/province</h1>");
+	print(" by state/province</caption>");
 	printTable();
 	$LocationResults = returnQuery($connect, 'locations', 'state_province', 'location_id', $location);
 	for ($k = 0; $k < sizeOf($LocationResults); $k++) {
@@ -105,7 +109,7 @@ if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
 		printQuery($connect, $DeptResults);
 	}
 } else if(returnQuery($connect, 'countries', 'country_id', 'country_id', $location)){
-	print(" by country id</h1>");
+	print(" by country id</caption>");
 	printTable();
 	$CountryResults = returnQuery($connect, 'countries', 'country_id', 'country_id', $location);
 	for ($j = 0; $j < sizeOf($CountryResults); $j++) {
@@ -116,7 +120,7 @@ if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
 		}
 	}
 } else if(returnQuery($connect, 'countries', 'country_name', 'country_id', $location)){
-	print(" by country</h1>");
+	print(" by country</caption>");
 	printTable();
 	$CountryResults = returnQuery($connect, 'countries', 'country_name', 'country_id', $location);
 	for ($j = 0; $j < sizeOf($CountryResults); $j++) {
@@ -127,7 +131,7 @@ if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
 		}
 	}
 } else if(returnQuery($connect, 'regions', 'region_name', 'region_id', $location)){
-	print(" region</h1>");
+	print(" region</caption>");
 	printTable();
 	$RegionResults = returnQuery($connect, 'regions', 'region_name', 'region_id', $location);
 	for ($i = 0; $i < sizeOf($RegionResults); $i++) {
@@ -141,7 +145,14 @@ if(returnQuery($connect, 'locations', 'city', 'location_id', $location)){
 		}
 	}
 } else {
-	print("</h1>No records found with query $location");
+	print("</caption>No records found with query $location");
 }
-
+print("</table>");
+?>
+<footer>
+	<p class="white">Thank you for using this program! - Programmer is: Group1</p>
+</footer>
+</div>
+</body>
+</html>  
 	

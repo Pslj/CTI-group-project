@@ -8,27 +8,34 @@
 	-->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Employee Search</title>
+	<title>Department Search</title>
 	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
 <header>
-	<h1>Employee Search</h1>
+	<h1>Department Search</h1>
 </header>
-
+<nav>
+	<h2>Navigation</h2>
+	<ul>
+		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
+		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
+		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+	</ul>  
+</nav>
 <main>
 	<form id="name-id" action="group1-hr-departmentlocation.php" method="post">
 		<fieldset>
 		<legend>Location</legend>
 			<label for="location">What is the location?</label>
-			<input type="text" id="location" name="location">
+			<input type="text" id="location" name="location" pattern="[A-Za-z]{0,}">
 		</fieldset>
 		<br>
 		<fieldset>
-		<legend>ID number</legend>
+		<legend>Department Name</legend>
 			<label for="deptName">What is the department name?</label>
-			<input type="text" id="deptName" name="deptName">
+			<input type="text" id="deptName" name="deptName" pattern="[A-Za-z]{0,}">
 		</fieldset>
 		<br />
 		<button type="submit" id="submit">Search the database</button>

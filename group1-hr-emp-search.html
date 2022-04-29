@@ -8,7 +8,7 @@
 	-->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Event Form DD</title>
+	<title>Employee Search</title>
 	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -16,19 +16,26 @@
 <header>
 	<h1>Employee Search</h1>
 </header>
-
+<nav>
+	<h2>Navigation</h2>
+	<ul>
+		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
+		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
+		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+	</ul>  
+</nav>
 <main>
 	<form id="name-id" action="group1-hr-emp-search.php" method="post">
 		<fieldset>
 		<legend>Last Name</legend>
-			<label for="lastName">What is the employee's last name?</label>
-			<input type="text" id="lastName" name="lastName">
+			<label for="lastName">What is the last name?</label>
+			<input type="text" id="lastName" name="lastName" pattern="[A-Za-z]{0,}">
 		</fieldset>
 		<br>
 		<fieldset>
 		<legend>ID number</legend>
-			<label for="idNum">What is the employees ID number?</label>
-			<input type="text" id="idNum" name="idNum">
+			<label for="idNum">What is the ID number?</label>
+			<input type="number" id="idNum" name="idNum">
 		</fieldset>
 		<br />
 		<button type="submit" id="submit">Search the database</button>
