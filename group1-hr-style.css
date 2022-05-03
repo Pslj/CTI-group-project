@@ -109,6 +109,10 @@ caption {
   padding: 5px;
 }
 
+main {
+  margin-left:20%;
+}
+
 fieldset {
   border: 2px solid LightCyan;	
 }
@@ -133,9 +137,7 @@ legend {
   text-align: center;
 }
 
-.gradient {
+.shadow {
   font-size: 30px;
-  background: -webkit-linear-gradient(tomato, #FFFF00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px MidnightBlue;
 }

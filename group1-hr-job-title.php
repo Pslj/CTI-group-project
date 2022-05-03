@@ -14,7 +14,7 @@
 	<h1>List of Employees by Job Title</h1>
 </header>
 <nav>
-	<h2 class="gradient">Navigation</h2>
+	<h2 class="shadow">Navigation</h2>
 	<ul>
 		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
 		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
