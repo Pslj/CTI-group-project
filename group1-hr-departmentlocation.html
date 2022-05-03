@@ -10,6 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Department Search</title>
 	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -22,6 +24,8 @@
 		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
 		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
 		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+		<br />
+		<button form="name-id" type="submit" id="submit">Search</button>
 	</ul>  
 </nav>
 <main>
@@ -29,7 +33,7 @@
 		<fieldset>
 		<legend>Location</legend>
 			<label for="location">What is the location?</label>
-			<input type="text" id="location" name="location" pattern="[A-Za-z]{0,}">
+			<input type="text" id="location" name="location" pattern="[A-Za-z0-9]{0,}">
 		</fieldset>
 		<br>
 		<fieldset>
@@ -37,13 +41,11 @@
 			<label for="deptName">What is the department name?</label>
 			<input type="text" id="deptName" name="deptName" pattern="[A-Za-z]{0,}">
 		</fieldset>
-		<br />
-		<button type="submit" id="submit">Search the database</button>
 	</form>
 </main>
 <br />
 <footer>
-	<p class="white">Thank you for using this program - Programmer is: Group1</p>
+	<p class="white">Thank you for using this program - Programmer: Group1</p>
 </footer>
 </div><!--closes wrapper-->
 </body>

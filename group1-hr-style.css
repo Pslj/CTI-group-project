@@ -1,0 +1,127 @@
+body {
+  background-color: LightCyan;
+  font-family: 'Archivo Black', 'Impact', sans-serif;
+}
+
+.container{
+  background-color: DarkTurquoise;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+}
+
+#submit{
+	font-family: 'Archivo Black', 'Impact', sans-serif;
+}
+
+header {
+  background-color: LightCyan;
+  color: DarkTurquoise;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 8px;
+  font-family: 'Philosopher', 'Brush Script MT', cursive;
+}
+
+nav {
+  width: 180px;
+  float: left;
+}
+
+nav ul {
+  padding: 0;
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 2px;
+}
+
+main {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: LightCyan;  
+}
+
+img {
+  border: inset;
+  width: 140px;
+}
+
+.white {
+  color: DarkTurquoise;
+}
+
+h2 {
+  color: LightCyan;
+  font-family: 'Philosopher', 'Brush Script MT', cursive;
+}
+
+footer {
+  clear: both;
+  padding: 10px;
+  background-color: LightCyan;
+  text-align: center;
+  font-family: 'Philosopher', 'Brush Script MT', cursive;
+}
+
+table, th, td {
+  border: 2px solid LightCyan;
+  padding: 10px;
+}
+
+thead {
+  background-color: LightCyan;
+  color: DarkTurquoise;
+}
+
+table {
+  width: 35%;
+  float: right;
+  margin: 5px;
+}
+
+tbody {
+  color: LightCyan;
+}
+
+tfoot {
+  font-size: 75%;
+  color: LightCyan;
+}
+
+caption {
+  font-family: 'Archivo Black', 'Impact', sans-serif;
+  font-weight: bold;
+  font-size: 120%;
+  color: LightCyan;
+  border: 2px solid LightCyan;
+}
+
+fieldset {
+  border: 2px solid LightCyan;	
+}
+
+legend {
+  background-color: LightCyan;
+  color: DarkTurquoise;
+  padding: 5px;
+}
+
+.alignment * {
+  display: block;
+  margin-bottom: .2em;
+}
+
+button {
+  background-color: LightCyan;
+  color: DarkTurquoise;
+  font-size: 1.5em;
+}

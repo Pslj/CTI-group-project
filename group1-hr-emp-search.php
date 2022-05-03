@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <title>HR last name or id number database search results</title>
   <link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -54,7 +56,7 @@ if(mysqli_num_rows($nameResult) == 0){
 mysqli_close($connect);
 ?>
 <footer>
-	<p class="white">Thank you for using this program - Programmer is: Group1</p>
+	<p class="white">Thank you for using this program - Programmer: Group1</p>
 </footer>
 </div>
 </body>
