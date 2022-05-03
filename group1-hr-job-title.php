@@ -14,11 +14,13 @@
 	<h1>List of Employees by Job Title</h1>
 </header>
 <nav>
-	<h2>Navigation</h2>
+	<h2 class="gradient">Navigation</h2>
 	<ul>
 		<li><a href="group1-hr-job-title.html">Job Title Search</a></li>
 		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
 		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
+		<li><a href="group1-hr-fuel.html">Fuel Calculator</a></li>
+		<li><a href="group1-hr-job-title.html">Back</a></li>
 	</ul>  
 </nav>
 <?php
@@ -61,7 +63,7 @@ function printTable($connect, $title){
 		while($row = mysqli_fetch_assoc($result)){
 			print ("<tr><td>".$row['employee_id']."</td><td>".$row['first_name']."</td><td>".$row['last_name']."</td><td>".$row['job_id']."</td><td>".$row['job_title']."</td><td>$".number_format($row['salary'])."</td></tr>");
 		}
-		print("</tbody></table>");
+		print("<tfoot><tr><td class=\"tableFooter\" colspan=\"100%\">End of Results</tr></td></tfoot></tbody></table>");
 	}
 }
 printTable($connect, $title);
@@ -69,7 +71,7 @@ printTable($connect, $title);
 mysqli_close($connect);
 ?>
 <footer>
-	<p class="white">Thank you for using this program - Programmer: Group1</p>
+	<h3>Thank you for using this program - Programmer: Group1</h3>
 </footer>
 </div>
 </body>

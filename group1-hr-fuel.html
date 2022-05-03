@@ -8,7 +8,7 @@
 	-->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Department Search</title>
+	<title>Fuel Calculator</title>
 	<link href="group1-hr-style.css" type="text/css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
 <div class="container">
 <header>
-	<h1>Department Search</h1>
+	<h1>Fuel Calculator</h1>
 </header>
 <nav>
 	<h2 class="gradient">Navigation</h2>
@@ -25,24 +25,30 @@
 		<li><a href="group1-hr-emp-search.html">Employee Search</a></li>
 		<li><a href="group1-hr-departmentlocation.html">Department Search</a></li>
 		<li><a href="group1-hr-fuel.html">Fuel Calculator</a></li>
-		<li><a href="group1-hr-portal.html">Back</a></li>
+		<li><a href="group1-hr-fuel.html">Back</a></li>
 		<br />
-		<button form="name-id" type="submit" id="submit">Search</button>
+		<button form="name-id" type="submit" id="submit">Calculate</button>
 	</ul>  
 </nav>
 <main>
-	<form id="name-id" action="group1-hr-departmentlocation.php" method="post">
+	<form id="name-id" action="group1-hr-fuel.php" method="post">
 		<fieldset>
-		<legend>Location</legend>
-			<label for="location">What is the location?</label>
-			<input type="text" id="location" name="location" pattern="[A-Za-z0-9]{0,}">
+		<legend>Average Mpg</legend>
+			<label for="mpg">What is the mpg of the vehicle?</label>
+			<input type="number" id="mpg" name="mpg" min=0 required>
 		</fieldset>
 		<br>
 		<fieldset>
-		<legend>Department Name</legend>
-			<label for="deptName">What is the department name?</label>
-			<input type="text" id="deptName" name="deptName" pattern="[A-Za-z]{0,}">
-		</fieldset>
+		<legend>Expected Cost of Gas per Gallon</legend>
+			<label for="gas">What is gas price?</label>
+			<input type="number" id="gas" name="gas" min=0 step=.001 required>
+		</fieldset>	
+		<br />		
+		<fieldset>
+		<legend>Length of Trip</legend>
+			<label for="trip">How long is the trip?</label>
+			<input type="number" id="trip" name="trip" min=0 step=.1 required>
+		</fieldset>	
 	</form>
 </main>
 <br />
